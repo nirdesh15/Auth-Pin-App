@@ -6,7 +6,7 @@ const app = express();
 const port = 5000;
 
 app.use(cors({
-  origin: 'https://client-vercel-webapp.vercel.app/', // Replace with the URL of your frontend
+  origin: 'https://client-vercel-webapp.vercel.app', // Replace with the URL of your frontend
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   allowedHeaders: 'Content-Type,Authorization'
 }));
