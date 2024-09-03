@@ -70,8 +70,7 @@ cd Auth-Pin-App</code></pre>
     <h3>Running the React Client</h3>
     <ol>
         <li><strong>Navigate to the Client Directory:</strong>
-            <pre><code>cd ..</code></pre>
-            <pre><code>cd react-pin-auth</code></pre>
+            <pre><code>cd ../react-pin-auth</code></pre>
         </li>
         <li><strong>Start the Client:</strong>
             <pre><code>yarn start</code></pre>
@@ -89,6 +88,6 @@ cd Auth-Pin-App</code></pre>
 
     <p>Thank you for your time and consideration.</p>
 
-    <p>Best regards, Nirdesh</p>
+    <p>Best regards,<br>Nirdesh</p>
 </body>
 </html>
