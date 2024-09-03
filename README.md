@@ -57,7 +57,7 @@ The project consists of two main parts: the Express server and the React client.
     const handleSubmit = async (event) => {
         event.preventDefault();
         // Replace with your actual API endpoint
-        const response = await fetch('http://localhost:5000/api/login', {
+        const response = await fetch('http://localhost:5000/verify', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
