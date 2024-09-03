@@ -90,7 +90,7 @@ const Login = () => {
 
         setLoading(true);
         try {
-            const response = await axios.post('http://localhost:5000/verify', { pin });
+            const response = await axios.post('https://vercel-app-server-rho.vercel.app/verify', { pin });
             if (response.status === 200) {
                 setSuccess('Verification successful! Please wait to be redirected');
                 setShowSuccess(true);
