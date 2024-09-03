@@ -14,7 +14,7 @@ Thank you for reviewing my submission for the Software Engineer Intern position 
     ```
 
 2. **Install Dependencies:**
-    Make sure you have [Yarn](https://yarnpkg.com/) installed. If not, you can install it following the instructions on their official website.
+    Ensure you have [Yarn](https://yarnpkg.com/) installed. If not, install it following the instructions on their official website.
     ```bash
     yarn install
     ```
@@ -28,12 +28,21 @@ The project consists of two main parts: the Express server and the React client.
     cd express-server
     ```
 
-2. **Start the Server:**
+2. **Update CORS Settings:**
+   Before starting the server, configure the CORS settings in `index.js` to allow requests from the React client. Open `index.js` and update the CORS settings to allow requests from `http://localhost:3000`. For example:
+    ```javascript
+    const cors = require('cors');
+    app.use(cors({
+        origin: 'http://localhost:3000'
+    }));
+    ```
+
+3. **Start the Server:**
     ```bash
     yarn start
     ```
 
-3. **Server URL:**
+4. **Server URL:**
     The server will be running on [http://localhost:5000](http://localhost:5000) by default.
 
 ### Running the React Client
@@ -42,12 +51,29 @@ The project consists of two main parts: the Express server and the React client.
     cd ../react-pin-auth
     ```
 
-2. **Start the Client:**
+2. **Update API Endpoint:**
+   Ensure that the `handlesubmit` function in `login.jsx` points to the correct API URL. Open `login.jsx` and set the API URL to `http://localhost:5000`. For example:
+    ```javascript
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        // Replace with your actual API endpoint
+        const response = await fetch('http://localhost:5000/api/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ /* your data */ })
+        });
+        // Handle response
+    };
+    ```
+
+3. **Start the Client:**
     ```bash
     yarn start
     ```
 
-3. **Client URL:**
+4. **Client URL:**
     The client will be running on [http://localhost:3000](http://localhost:3000) by default.
 
 ## Testing Responsive Design
